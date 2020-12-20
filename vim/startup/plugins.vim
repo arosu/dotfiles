@@ -12,6 +12,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 
+Plug 'jelera/vim-javascript-syntax'
+
+" always show sign column
+set signcolumn=yes
+
 call plug#end()
 
 " fzf
