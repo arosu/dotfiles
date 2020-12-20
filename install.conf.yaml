@@ -1,0 +1,45 @@
+- clean: ['~']
+- defaults:
+    link:
+        create: true
+        relink: true
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bash_profile: bash_profile
+    ~/.aliases: aliases
+    ~/.bash_prompt: bash_prompt
+    ~/.bashrc: bashrc
+    ~/.curlrc: curlrc
+    ~/.editorconfig: editorconfig
+    ~/.exports: exports
+    ~/.functions: functions
+    ~/.gitattributes: gitattributes
+    ~/.gitconfig: gitconfig
+    ~/.gitmodules: gitmodules
+    ~/.gvimrc: gvimrc
+    ~/.hgignore: hgignore
+    ~/.hushlogin: hushlogin
+    ~/.inputrc: inputrc
+    ~/.screenrc: screenrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.vim: vim
+    ~/.wgetrc: wgetrc
+    ~/init: init
+
+- create:
+  - ~/.vim/swaps
+  - ~/.vim/backups
+  - ~/.vim/undo
+
+- shell:
+    - [git submodule update --init --recursive, Updating submodules]
+    - command: vim +PlugInstall +qall
+      stdin: true
+      stdout: true
+      stderr: true
+    - command: vim +PlugUpgrade +qall
+      stdin: true
+      stdout: true
+      stderr: true

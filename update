@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Sync with remote
+git pull origin main
+
+# Update submodules
+git submodule update --init --remote
