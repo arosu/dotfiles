@@ -15,8 +15,8 @@ _comp_options+=(globdots) # With hidden files
 source $ZDOTDIR/completion.zsh
 
 # prompt
-fpath=($ZDOTDIR $fpath)
-autoload -Uz prompt.zsh; prompt.zsh
+autoload -U promptinit; promptinit
+prompt pure
 
 # fzf
 source <(fzf --zsh)

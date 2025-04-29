@@ -42,5 +42,8 @@ export npm_config_cache="$XDG_CONFIG_HOME/npm/cache"
 # cargo
 export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 
+# homebrew
+export HOMEBREW_NO_ENV_HINTS="true"
+
 # PATH
 export PATH="/usr/bin:/opt/homebrew/bin:${PATH}"
