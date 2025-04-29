@@ -1,0 +1,11 @@
+\setenv PAGER 'less -S'
+
+\set COMP_KEYWORD_CASE upper
+
+\pset null '(null)'
+
+\set HISTFILE ~/.config/psql/psql_history
+
+\set HISTSIZE 50000
+
+-- Queries

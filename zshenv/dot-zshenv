@@ -1,0 +1,46 @@
+export DOTFILES="$HOME/dotfiles"
+
+# XDG configs
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# History
+export HISTFILE="$ZDOTDIR/.zhistory"
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTORY_IGNORE="(&|exit|ls|la|bg|fg|history|clear|c)"
+
+# git
+export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
+
+# vim
+if [ -n "$VIM" ]; then
+    export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
+fi
+
+# neovim
+export EDITOR="nvim"
+export VISUAL="nvim"
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
+
+# postgres
+export PSQLRC="$XDG_CONFIG_HOME/psql/psqlrc"
+export PGPASSFILE="$XDG_CONFIG_HOME/psql/pgpass"
+export PGSERVICEFILE="$XDG_CONFIG_HOME/psql/pg_service.conf"
+
+# less
+export LESSHISTFILE="$XDG_CONFIG_HOME/less/history"
+
+# npm
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export npm_config_cache="$XDG_CONFIG_HOME/npm/cache"
+
+# cargo
+export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
+
+# PATH
+export PATH="/usr/bin:/opt/homebrew/bin:${PATH}"

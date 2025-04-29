@@ -1,0 +1,30 @@
+# set the title
+if [[ "$(hostname)" == "dev-10-34-10-21" ]]; then
+  title="arosu1-dev"
+else
+  title="$(hostname)"
+fi
+echo -ne "\033]0;$title\007"
+
+source $ZDOTDIR/aliases.zsh
+source $ZDOTDIR/options.zsh
+
+# zsh completion
+autoload -U compinit; compinit
+_comp_options+=(globdots) # With hidden files
+source $ZDOTDIR/completion.zsh
+
+# prompt
+fpath=($ZDOTDIR $fpath)
+autoload -Uz prompt.zsh; prompt.zsh
+
+# fzf
+source <(fzf --zsh)
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# plugins
+for file in $ZDOTDIR/plugins/*.sh; do
+  [ -f "$file" ] && source "$file"
+done

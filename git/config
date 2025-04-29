@@ -1,0 +1,30 @@
+[core]
+    pager = less -R
+    preloadindex = true
+    editor = nvim
+
+    # Speed up commands involving untracked files such as `git status`
+    untrackedCache = true
+
+    # Global ignore file
+    excludesfile = ~/.config/git/ignore
+
+[branch]
+    # Show most recently changed branches first
+    sort = -committerdate
+
+[push]
+    autoSetupRemote = true
+
+[grep]
+    lineNumber = true
+
+[user]
+    name = Alexandru Rosu
+    email = 25542112+arosu@users.noreply.github.com
+
+[pull]
+    rebase = false
+
+[init]
+    defaultBranch = main
