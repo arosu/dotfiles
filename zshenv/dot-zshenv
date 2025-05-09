@@ -8,6 +8,9 @@ export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+# zsh prompt
+export PURE_PROMPT_SYMBOL="$"
+
 # History
 export HISTFILE="$ZDOTDIR/.zhistory"
 export HISTSIZE=10000
@@ -46,4 +49,4 @@ export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 export HOMEBREW_NO_ENV_HINTS="true"
 
 # PATH
-export PATH="/usr/bin:/opt/homebrew/bin:${PATH}"
+export PATH="/usr/bin:/usr/local/bin:/opt/homebrew/bin:${PATH}"
